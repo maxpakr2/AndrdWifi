@@ -1,0 +1,42 @@
+<Layout_For_App>:
+    Label:
+        text: 'Developed By Anonymous'
+        pos_hint: {"x":0,"y":0.45}
+
+    Label:
+        text: 'OUTPUT' + root.output
+        id: label_output
+        background_color: (1, 1, 1, 1)
+        size_hint: (0.451, 0.7)
+        pos_hint: {"x":0.27,"y":0.17}
+        valign: "middle"
+        halign: "left"
+        color: (0,1,0)
+        canvas.before:
+            Color:
+                rgba: self.background_color
+            Rectangle:
+                size: self.size
+                pos: self.pos
+        border: 3, 3
+    Button:
+        text: 'CRACK'
+        background_color: 1, 0, 0, 1
+        color: 0, 1, 1
+        size_hint: (0.4, 0.15)
+        pos_hint: {"x":0.0199,"y":0.01}
+        font_size: 30
+        id: wait_btn
+
+    TextInput:
+        text: 'Enter Wifi SSID'
+        id: input_value
+        size_hint: (0.5, 0.15)
+        pos_hint: {'x':0.49,'y':0.01}
+        font_size: 40
+    ProgressBar:
+        id: pro_bar
+        min: 0
+        max: 100
+        pos_hint: {"x":0,"y":0.4}
+        bar_color: (0,1,0)
